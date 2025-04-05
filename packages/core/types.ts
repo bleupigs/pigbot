@@ -1,0 +1,2 @@
+export type JsonCompatible = boolean | number | string | null | JsonCompatible[] | { [key: string]: JsonCompatible };
+export type JsonObject<K extends string | number, V extends JsonCompatible> = Record<K, V>;

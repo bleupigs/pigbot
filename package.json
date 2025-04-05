@@ -1,0 +1,18 @@
+{
+  "name": "pigbot",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "docker-compose -f docker/compose.yaml up --build --always-recreate-deps"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  }
+}

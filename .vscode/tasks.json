@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Development Mode",
+			"type": "shell",
+			"command": "$HOME/.bun/bin/bun start",
+			"detail": "Run PigBot in Development Mode",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		}
+	]
+}

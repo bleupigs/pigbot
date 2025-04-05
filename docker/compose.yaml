@@ -1,0 +1,31 @@
+volumes:
+  postgres_data:
+  pigbot_data:
+
+
+networks:
+  backend:
+    external: true
+
+services:
+  postgres1:
+    container_name: postgres1
+    env_file: .env.develop
+    image: postgres:17-alpine
+    restart: always
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  pigbot:
+    build:
+      dockerfile: docker/Dockerfile
+      context: ..
+    container_name: pigbot
+    env_file: .env.develop
+    restart: always
+    volumes:
+      - pigbot_data:/app/data
+    networks:
+      - backend
